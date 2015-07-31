@@ -34,7 +34,7 @@ RUN mkdir -p --mode 777 $FAKE_SMTP_MAIL_DIR \
     && curl -o fakeSMTP.zip -k -SL http://nilhcem.github.com/FakeSMTP/downloads/fakeSMTP-latest.zip \
     && unzip fakeSMTP.zip \
     && rm -f fakeSMTP.zip \
-    && mv fakeSMTP-*.jar fakeSTMP.jar
+    && mv fakeSMTP-*.jar fakeSMTP.jar
 
 # To listen like a real stmp server
 EXPOSE 25
