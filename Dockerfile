@@ -11,9 +11,6 @@
 # Base image, java required
 FROM java:7-jre
 
-# Maintainer
-MAINTAINER alban.montaigu@gmail.com
-
 # Environment configuration
 ENV DEBIAN_FRONTEND="noninteractive" \
     FAKE_SMTP_MAIL_DIR="/var/mail" \
