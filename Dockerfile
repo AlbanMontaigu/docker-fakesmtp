@@ -9,20 +9,12 @@
 # ================================================================================================================
 
 # Base image, java required
-FROM java:7-jre
+FROM openjdk:8-jre-alpine
 
 # Environment configuration
 ENV DEBIAN_FRONTEND="noninteractive" \
     FAKE_SMTP_MAIL_DIR="/var/mail" \
     FAKE_SMTP_APP_DIR="/opt/FakeSMTP"
-
-# Base system update (isolated to not reproduce each time)
-RUN set -x \
-    && apt-get -y update --quiet \
-    && apt-get -y upgrade  \
-    && apt-get -y autoremove  \
-    && apt-get -y autoclean \
-    && apt-get -y clean
 
 # Install fake smtp server
 RUN mkdir -p --mode 777 $FAKE_SMTP_MAIL_DIR \
