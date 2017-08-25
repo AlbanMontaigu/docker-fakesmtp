@@ -17,7 +17,7 @@ ENV DEBIAN_FRONTEND="noninteractive" \
     FAKE_SMTP_APP_DIR="/opt/FakeSMTP"
 
 # Install fake smtp server
-RUN apk --nocache add curl \
+RUN apk --update --nocache add curl \
     && mkdir -p -m 777 $FAKE_SMTP_MAIL_DIR \
     && mkdir -p -m 777 $FAKE_SMTP_APP_DIR \
     && cd $FAKE_SMTP_APP_DIR \
