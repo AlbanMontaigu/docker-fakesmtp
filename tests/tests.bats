@@ -12,7 +12,7 @@
 
 # Java is available
 @test "Java is available" {
-    docker run --entrypoint=/bin/sh ${DOCKER_APP_IMAGE_NAME} -c 'java -v'
+    docker run --entrypoint=/bin/sh ${DOCKER_APP_IMAGE_NAME} -c 'java -version'
 }
 
 # FakeSMTP jar is present
