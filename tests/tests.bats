@@ -11,5 +11,5 @@
 
 # FakeSMTP jar is present
 @test "FakeSMTP jar is present}" {
-	[[ docker run --entrypoint=/bin/sh ${DOCKER_APP_IMAGE_NAME} -c 'ls /opt/FakeSMTP/fakeSMTP.jar' ]]
+	docker run --entrypoint=/bin/sh ${DOCKER_APP_IMAGE_NAME} -c 'ls /opt/FakeSMTP/fakeSMTP.jar'
 }
