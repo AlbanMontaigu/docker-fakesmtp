@@ -22,6 +22,5 @@
 
 # FakeSMPTP commands are available
 @test "FakeSMTP commands are available" {
-	$result="$(docker run --entrypoint=/bin/sh ${DOCKER_APP_IMAGE_NAME} -c 'java -jar /opt/FakeSMTP/fakeSMTP.jar --help')"
-    [[ "$result" == *"usage: java -jar fakeSMTP.jar"* ]]
+	docker run --entrypoint=/bin/sh ${DOCKER_APP_IMAGE_NAME} -c 'java -jar /opt/FakeSMTP/fakeSMTP.jar --help'
 }
